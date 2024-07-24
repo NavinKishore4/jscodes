@@ -1,0 +1,23 @@
+<input type="number" value="10"> <br><br>
+<input type="number" value="10"> <br><br>
+<input type="number" value="10"> <br><br>
+<input type="number" value="10"> <br><br>
+<button type="button" onclick="test(),add()">Trigger</button>
+<span>Hello</span>
+<span>hi</span>
+<script>
+    function test() {
+        var inputElements = document.getElementsByTagName("input");
+        console.log(inputElements);
+        var spanElement = document.getElementsByTagName("span");
+        console.log(spanElement);
+    }
+    function add() {
+        var inputElements = document.getElementsByTagName("input");
+        var total = 0;
+        for (var i = 0; i < inputElements.length; i++) {
+            total = total + parseInt(inputElements[i].value);
+        }
+        console.log("total : " + total);
+    }
+</script>

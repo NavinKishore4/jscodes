@@ -1,0 +1,13 @@
+<script>
+    function reformatDates(dateStrings) {
+        return dateStrings.map(function (dateString) {
+            var [year, month, day] = dateString.split('-');
+            return `${day}/${month}/${year}`;
+        });
+    }
+
+    // Example usage:
+    var dateStrings = ["2024-04-01", "2024-04-02", "2024-04-03"];
+    var reformattedDates = reformatDates(dateStrings);
+    console.log(reformattedDates); // Output: ["01/04/2024", "02/04/2024", "03/04/2024"]
+</script>

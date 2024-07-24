@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-4">
+
+            <table cellpadding="5px">
+                <tr>
+                    <th>Task</th>
+                </tr>
+                <tr>
+                    <td><input type="text" id="task" /></td>
+                </tr>
+                <tr>
+                    <th>Date</th>
+                </tr>
+                <tr>
+                    <td><input type="date" id="date" /></td>
+                </tr>
+                <tr>
+                    <th>Priority</th>
+                </tr>
+                <tr>
+                    <td><select name="Priority" id="Prioritys">
+                            <option>High</option>
+                            <option>Medium</option>
+                            <option>Low</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="Add()">Add</button></td>
+                </tr>
+            </table>
+
+        </div>
+        <div class="col-md-8">
+            <div id="target">
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    var taskcount = 0;
+    var Hightask = 0;
+    var MediumTask = 0;
+
+    var Lowtask = 0;
+
+
+    function Add() {
+        var task = document.getElementById("task").value;
+        var date = document.getElementById("date").value;
+        var priority = document.getElementById("Prioritys").value;
+
+        var div = document.createElement("div");
+        var id = "t" + taskcount;
+        div.id = id;
+
+        if (priority == "High") {
+            div.style.backgroundColor = "red";
+            Hightask++;
+        } else if (priority == "Medium") {
+            div.style.backgroundColor = "yellow";
+            MediumTask++;
+        } else if (priority == "Low") {
+            div.style.backgroundColor = "blue";
+            Lowtask++;
+        }
+
+        var span = document.createElement("span");
+        span.innerHTML = task + " (" + date + ")";
+        var button = document.createElement("button");
+        button.textContent = "Delete";
+        button.type = "button";
+        var button1 = document.createElement("button");
+        button1.textContent = "Done";
+        button1.type = "button";
+        button1.addEventListener("click", function () { done(div) });
+        button.addEventListener("click", function () { deleteTask(id) });
+        var span1 = document.createElement("span");
+        span1.innerHTML = " Task :" + taskcount + " HighTask : " + Hightask + " MediumTask : " + MediumTask + " LowTask : " + Lowtask;
+        div.appendChild(span);
+        div.appendChild(button);
+        div.appendChild(button1);
+        div.appendChild(span1);
+
+        document.getElementById("target").appendChild(div);
+
+        // Clear input fields
+        document.getElementById("task").value = "";
+        document.getElementById("date").value = "";
+        document.getElementById("Prioritys").selectedIndex = 0;
+
+        taskcount++;
+    }
+
+    function deleteTask(elementId) {
+        var taskElement = document.getElementById(elementId);
+        taskElement.remove();
+    }
+    function done(taskElement) {
+        taskElement.style.backgroundColor = "green";
+    }
+</script>

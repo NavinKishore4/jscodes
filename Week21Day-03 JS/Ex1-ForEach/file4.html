@@ -1,0 +1,17 @@
+<script>
+    // 9. Implement a function that takes an array of numbers and uses the forEach method to check if all elements are even. Return a boolean.
+
+    var nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+    var res = checkEven(nums);
+    console.log(res);
+    function checkEven(nums) {
+        var bool = true;
+        nums.forEach(function (temp) {
+            if (temp % 2 !== 0) {
+                bool = false;
+            }
+        });
+        return bool;
+    }
+
+</script>

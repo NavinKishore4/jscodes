@@ -1,0 +1,39 @@
+// Given an array of student objects with a grade property, write a function that uses the filter method to create a new
+array containing only the students who have a grade above a certain threshold.
+<script>
+    var students = [
+        {
+            "name": "navin",
+            "grade": "a"
+        },
+        {
+            "name": "kodee",
+            "grade": "b"
+        },
+        {
+            "name": "vikram",
+            "grade": "c"
+        },
+        {
+            "name": "vivek",
+            "grade": "d"
+        },
+        {
+            "name": "saran",
+            "grade": "e"
+        }
+    ];
+    var gradeAbove = "d";
+    filterFunction(students, gradeAbove);
+    function filterFunction(student, gradeAbove) {
+        var newArr = student.filter(function (temp) {
+            if (temp.grade < gradeAbove) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        });
+        console.log(newArr);
+    }
+</script>

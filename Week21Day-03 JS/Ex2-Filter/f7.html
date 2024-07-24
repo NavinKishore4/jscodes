@@ -1,0 +1,19 @@
+// Given an array of arrays, write a function that uses the filter method to create a new array containing only the
+arrays with a length greater than a specified value.
+<script>
+    var arrayOfArrays = [[1], [4, 5, 6], [7, 8, 9]];
+    var specified = 2;
+    filterFunction(arrayOfArrays, specified);
+
+    function filterFunction(arrayOfArrays, specified) {
+        var newArr = arrayOfArrays.filter(function (temps) {
+            if (temps.length > specified) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        });
+        console.log(newArr);
+    }
+</script>

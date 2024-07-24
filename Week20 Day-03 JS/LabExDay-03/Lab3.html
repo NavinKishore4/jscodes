@@ -1,0 +1,38 @@
+<script>
+
+    var Person = class {
+        constructor(name, age, city) {
+            this.name = name;
+            this.age = age;
+            this.city = city;
+        }
+    };
+
+    var Car = class {
+        constructor(model, engineType, horsepower) {
+            this.model = model;
+            this.engine = {
+                type: engineType,
+                horsepower: horsepower
+            };
+        }
+    };
+
+    // 1. Create an object named person with properties name (string), age (number), and city (string).
+    var person = new Person("John", 30, "Los Angeles");
+
+    // 2. Access the age property of the person object.
+    console.log(person.age); // Output: 30
+
+    // 3. Change the value of the city property in the person object to "New York."
+    person.city = "New York";
+
+    // 4. Create a nested object named car with properties model (string) and engine (an object with properties type and horsepower).
+    var car = new Car("Honda", "V6", 300);
+
+    // 5. Access the horsepower property of the engine property in the car object.
+    console.log(car.engine.horsepower); // Output: 300
+
+    // 6. Change the model property of the car object to "Toyota."
+    car.model = "Toyota";
+</script>

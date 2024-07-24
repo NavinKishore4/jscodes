@@ -1,0 +1,29 @@
+<script>
+    //traditional
+    var x = traditional("Hello World");
+    alert(x);
+    function traditional(message) {
+        console.log(message);
+        return "hi";
+    }
+
+    //annoymous
+    var add = function (a, b) {
+        return (a + b);
+    }
+    var result = add(45, 55);
+    console.log(result);
+
+    //arrow function
+    var mul = (a, b) => {
+        return (a * b);
+    }
+    var answer = mul(5, 6)
+    console.log(answer);
+
+    //arrow labda
+    var square = (a) => a * a;
+    var squareop = square(9);
+    console.log(squareop);
+
+</script>

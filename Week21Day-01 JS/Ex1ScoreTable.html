@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Card</title>
+</head>
+
+<body>
+
+    <table border="2">
+        <tr>
+            <th>Batting</th>
+            <th>R</th>
+            <th>4s</th>
+            <th>6s</th>
+        </tr>
+        <tr>
+            <td class="players">Wriddhiman Saha</td>
+            <td><input type="number" readonly class="runs" id="runs"></td>
+            <td><input type="number" id="four" onkeyup="total()"></td>
+            <td><input type="number" id="six" onkeyup="total()"></td>
+        </tr>
+        <tr>
+            <td class="players">gill</td>
+            <td><input type="number" readonly class="runs" id="runs"></td>
+            <td><input type="number" id="four" onkeyup="total()"></td>
+            <td><input type="number" id="six" onkeyup="total()"></td>
+        </tr>
+        <tr>
+            <td class="players">sai</td>
+            <td><input type="number" readonly class="runs" id="runs"></td>
+            <td><input type="number" id="four" onkeyup="total()"></td>
+            <td><input type="number" id="six" onkeyup="total()"></td>
+        </tr>
+        <tr>
+            <td class="players">miller</td>
+            <td><input type="number" readonly class="runs" id="runs"></td>
+            <td><input type="number" id="four" onkeyup="total()"></td>
+            <td><input type="number" id="six" onkeyup="total()"></td>
+        </tr>
+        <tr>
+            <td class="players">vijay</td>
+            <td><input type="number" readonly class="runs" id="runs"></td>
+            <td><input type=" number" id="four" onkeyup="total()"></td>
+            <td><input type=" number" id="six" onkeyup="total()"></td>
+        </tr>
+        <tr>
+            <td>Extras</td>
+            <td><input type=" number" id="extras"></td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
+
+<script>
+    function total() {
+
+        var playersElements = document.getElementsByClassName("players");
+
+        for (var i = 0; i < playersElements.length; i++) {
+            var temp = playersElements[i].value;
+            if (temp.length > 0 && !isNaN(temp)) {
+                var four = 4 * playersElements[i](parseInt(document.getElementById("four").value));
+                var six = 6 * playersElements[i](parseInt(document.getElementById("six").value));
+                var total = four + six;
+                playersElements[i](document.getElementById(runs).value) = total;
+            }
+        }
+    }
+</script>

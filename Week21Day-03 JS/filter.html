@@ -1,0 +1,25 @@
+<script>
+
+    var marks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    takeOnly2(marks);
+    /*
+    function takeOnly2(marks) {
+        var numbers2 = marks.filter(temp => temp % 2 == 0);
+        console.log(numbers2);
+    }
+    */
+
+    function takeOnly2(numbers) {
+        var answer = numbers.filter(function (temp) {
+            if (temp % 2 == 0) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        );
+        console.log(answer);
+    }
+
+</script>

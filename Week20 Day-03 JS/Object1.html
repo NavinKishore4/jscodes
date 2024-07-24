@@ -1,0 +1,74 @@
+<script>
+    //class representataion
+
+    var bank =
+    {
+        accountNo: 123123,
+        ifsc: "ASD123"
+    };
+
+    var person =
+    {
+        name: "Navin",
+        age: 18,
+        gender: "male",
+        marks: [],
+        welcome: function () {
+            console.log("My name is " + this.name);
+            console.log("My age is " + this.age);
+        },
+        myBank: bank,
+        printBankDetails: function () {
+            console.log("Ac No : " + this.myBank.accountNo);
+            console.log("IFSC : " + this.myBank.ifsc);
+        },
+
+        findTotal: function (callback) {
+            var total = 0;
+            for (var i = 0; i < this.marks.length; i++) {
+                total += this.marks[i];
+            }
+            console.log("Average is : " + total / this.marks.length);
+            callback(total / this.marks.length);
+        }
+
+    };
+
+
+    /*    var student =
+        {
+            name,
+            rollno,
+            welcome: function () {
+                console.log("my name is " + this.name);
+                console.log("my rollno is " + this.rollno);
+            }
+        }
+    
+        var s1 = Object.create(student);
+        s1.name = "Navin";
+        s1.rollno = "10";*/
+
+    var p1 = Object.create(person);
+    p1.name = "Kishore";
+    p1.welcome();
+    p1.printBankDetails();
+    p1.marks = [100, 100];
+
+
+
+    var grade = function (average) {
+        if (average >= 0 && average <= 49) {
+            console.log("The Grade is C");
+        }
+        else if (average >= 50 && average <= 89) {
+            console.log("The Grade is B");
+        }
+        else if (average >= 90 && average <= 100) {
+            console.log("The Grade is A");
+        }
+    }
+
+    p1.findTotal(grade);
+
+</script>

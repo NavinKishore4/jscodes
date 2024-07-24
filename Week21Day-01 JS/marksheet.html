@@ -1,0 +1,20 @@
+1:<input type="number" class="input"><br><br>
+2:<input type="number" class="input"><br><br>
+3:<input type="number" class="input"><br><br>
+4:<input type="number" class="input"><br><br>
+5:<input type="number" class="input"><br><br>
+6:<input type="number" class="input"><br><br>
+7:<input type="number" class="input"><br><br>
+8:<input type="number" class="input"><br><br>
+Total: <input type="number" id="total"> <br> <br>
+<button type="button" onclick="findTotal()">Submit</button>
+<script>
+    function findTotal() {
+        var inputElements = document.getElementsByClassName("input");
+        var total = 0;
+        for (var i = 0; i < inputElements.length; i++) {
+            total = total + parseInt(inputElements[i].value);
+        }
+        document.getElementById("total").value = total;
+    }
+</script>

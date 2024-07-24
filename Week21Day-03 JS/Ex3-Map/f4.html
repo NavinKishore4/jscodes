@@ -1,0 +1,23 @@
+<script>
+    // Given an array of objects with firstName and lastName properties, write a function that uses the map method to create a new array containing only the first names.
+
+    var student = [
+        {
+            "firstname": "navin",
+            "lastname": "R"
+        },
+        {
+            "firstname": "Koode",
+            "lastname": "S"
+        },
+        {
+            "firstname": "Saran",
+            "lastname": "Kumar"
+        }
+    ];
+    var newArr = student.map(function (temp) {
+        return temp.firstname;
+    });
+    console.log(newArr);
+
+</script>

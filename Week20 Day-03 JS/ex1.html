@@ -1,0 +1,29 @@
+<script>
+    //1.find total
+    //2.find grade
+
+    function add(marks, callback) {
+        var total = 0;
+        for (var i = 0; i < marks.length; i++) {
+            total += marks[i];
+        }
+        console.log("Total = " + total);
+        console.log("Average : " + (total / marks.length))
+        callback(total / marks.length);
+    }
+
+    var findGrade = function (average) {
+        if (average >= 0 && average <= 49) {
+            console.log("The Grade is C");
+        }
+        else if (average >= 50 && average <= 89) {
+            console.log("The Grade is B");
+        }
+        else if (average >= 90 && average <= 100) {
+            console.log("The Grade is A");
+        }
+    }
+
+    add([98, 97, 96], findGrade);
+
+</script>

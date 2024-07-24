@@ -1,0 +1,26 @@
+<script>
+    // 8. Given an array of objects with name properties, use the forEach method to create a new array containing only the names. Return the new array.
+
+    var names = [
+        {
+            "name": "lion",
+            "age": 18
+        },
+        {
+            "name": "tiger",
+            "age": 19
+        },
+        {
+            "name": "Leo",
+            "age": 22
+        }
+    ]
+
+    var onlyName = [];
+    names.forEach(function (temp) {
+        onlyName.push(temp.name);
+    });
+
+    console.log(onlyName);
+
+</script>

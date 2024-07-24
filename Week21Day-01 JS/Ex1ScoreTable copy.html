@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Card</title>
+</head>
+
+<body>
+
+    <table border="2">
+        <tr>
+            <th>Batting</th>
+            <th>R</th>
+            <th>4s</th>
+            <th>6s</th>
+        </tr>
+        <tr>
+            <td class="players">Wriddhiman Saha</td>
+            <td><input type="number" readonly class="runs"></td>
+            <td><input type="number" class="four" oninput="total()"></td>
+            <td><input type="number" class="six" oninput="total()"></td>
+        </tr>
+        <tr>
+            <td class="players">Gill</td>
+            <td><input type="number" readonly class="runs"></td>
+            <td><input type="number" class="four" oninput="total()"></td>
+            <td><input type="number" class="six" oninput="total()"></td>
+        </tr>
+        <tr>
+            <td class="players">Sai</td>
+            <td><input type="number" readonly class="runs"></td>
+            <td><input type="number" class="four" oninput="total()"></td>
+            <td><input type="number" class="six" oninput="total()"></td>
+        </tr>
+        <tr>
+            <td class="players">Miller</td>
+            <td><input type="number" readonly class="runs"></td>
+            <td><input type="number" class="four" oninput="total()"></td>
+            <td><input type="number" class="six" oninput="total()"></td>
+        </tr>
+        <tr>
+            <td class="players">Vijay</td>
+            <td><input type="number" readonly class="runs"></td>
+            <td><input type="number" class="four" oninput="total()"></td>
+            <td><input type="number" class="six" oninput="total()"></td>
+        </tr>
+        <tr>
+            <td>Extras</td>
+            <td><input type="number" id="extras" oninput="total()"></td>
+        </tr>
+    </table>
+
+    <script>
+        function total() {
+            var playersRows = document.querySelectorAll('.players');
+
+            playersRows.forEach(function (row) {
+                var runsInput = row.nextElementSibling.querySelector('.runs');
+                var fourInput = row.nextElementSibling.querySelector('.four');
+                var sixInput = row.nextElementSibling.querySelector('.six');
+
+                if (runsInput && fourInput && sixInput) {
+                    var four = parseInt(fourInput.value) || 0;
+                    var six = parseInt(sixInput.value) || 0;
+                    var totalRuns = (four * 4) + (six * 6);
+                    runsInput.value = totalRuns;
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

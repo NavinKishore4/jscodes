@@ -1,0 +1,30 @@
+<script>
+
+    function add(a, b) {
+        return function () {
+            console.log(a + b);
+        }
+    }
+    var result = add(7, 3);
+    result();
+
+    var num = 10;
+
+    (function () {
+        console.log(num * num);
+    })();
+
+    function createMultiplier(a, b, callback) {
+        return callback(a, b);
+    }
+    function mul(a, b) {
+        console.log("multiplier is " + (a * b));
+        return a * b;
+    }
+
+    var r = createMultiplier(10, 2, mul);
+    console.log(r);
+
+
+
+</script>

@@ -1,0 +1,26 @@
+<div id="elements">
+
+</div>
+<button type="button" onclick="createLI()">create</button>
+<script>
+    function createLI() {
+        var ol = document.createElement("ol");
+
+        var li1 = document.createElement("li");
+        li1.innerHTML = "Apple"
+
+        var li2 = document.createElement("li");
+        li2.innerHTML = "Banana"
+        var li3 = document.createElement("li");
+        li3.innerHTML = "Orange"
+        var li4 = document.createElement("li");
+        li4.innerHTML = "Grapes"
+
+        ol.appendChild(li1);
+        ol.appendChild(li2);
+        ol.appendChild(li3);
+        ol.appendChild(li4);
+
+        document.getElementById("elements").appendChild(ol);
+    }
+</script>

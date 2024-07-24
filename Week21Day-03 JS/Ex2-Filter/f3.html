@@ -1,0 +1,19 @@
+// Create a function that takes an array of names and a target letter. Use the filter method to create a new array
+containing only the names that start with the specified letter.
+
+<script>
+    var names = ["navin", "kishore", "kodee", "boopathi", "nimal"];
+    var target = 'n';
+    filterfunction(names, target);
+    function filterfunction(names, target) {
+        var arr = names.filter(function (temp) {
+            if (temp.charAt(0) == target) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        });
+        console.log(arr);
+    }
+</script>

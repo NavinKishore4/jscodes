@@ -1,0 +1,39 @@
+<div id="target"></div>
+<button type="button" onclick="addPlayer()">Add Player</button>
+<button type="button" onclick="deleteAll()">Delete All</button>
+<script>
+
+    var playerCount = 1;
+
+    function addPlayer() {
+        var div = document.createElement("div");
+        var id = "p" + playerCount;
+        div.id = id;
+        div.classList.add("players")
+        var span = document.createElement("span");
+        span.innerHTML = "player " + playerCount;
+        playerCount++;
+        var button = document.createElement("button");
+        button.textContent = "Delete";
+        button.type = "button";
+
+        button.addEventListener("click", function () { deletePlayer(id) });
+
+        div.appendChild(button);
+        div.appendChild(span);
+
+        document.getElementById("target").appendChild(div);
+    }
+
+    function deletePlayer(elementId) {
+        var player = document.getElementById(elementId);
+        player.remove();
+    }
+    function deleteAll() {
+        var players = document.getElementsByClassName("players");
+        for (var i = 0; i < players.length;) {
+            players[i].remove();
+        }
+    }
+
+</script>

@@ -1,0 +1,38 @@
+<script>
+    //Math Constants
+    console.log(Math.PI);
+
+    //Math Functions
+    console.log(Math.round(10.78));
+
+    console.log(Math.floor(10.78));
+    console.log(Math.ceil(10.0000001));
+
+    //trunc ignores the decimal value
+    console.log(Math.trunc(10.78));
+    console.log(Math.trunc(10.00000000));
+
+    //abs - absolute
+    console.log(Math.abs(-10));
+    console.log(Math.abs(12));
+
+    var age1 = 20;
+    var age2 = 40;
+    console.log(Math.abs(age1 - age2));
+
+    console.log(Math.max(10, 20, 30, 40, 12, 2));
+    console.log(Math.min(10, 20, 30, 40, 12, 2));
+
+    console.log(Math.sqrt(4));
+    console.log(Math.pow(2, 4));
+    console.log(Math.random());//0 [inclusive] - 1 [exclusive]
+
+    console.log(Math.floor(Math.random() * 10))
+    console.log(Math.ceil(Math.random() * 10))
+    console.log(Math.trunc(Math.random() * 10))
+
+    //12 -25 :: 13
+    var max = 25;
+    var min = 12;
+    console.log(Math.floor(Math.random() * (max - min)) + min);
+</script>

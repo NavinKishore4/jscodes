@@ -1,0 +1,31 @@
+<script>
+
+    class bank {
+        constructor(ac, ifsc) {
+            this.ac = ac;
+            this.ifsc = ifsc;
+        }
+    }
+
+
+    class person {
+        constructor(name, age, myBank) {
+            this.name = name;
+            this.age = age;
+            this.myBank = myBank;
+        }
+        greeting() {
+            console.log("My Name is " + this.name);
+            console.log("My age is " + this.age);
+            console.log("My Account Number " + this.myBank.ac);
+            console.log("My IFSC Number " + this.myBank.ifsc);
+
+        }
+    }
+
+    var b1 = new bank(123123, "ACC123");
+
+
+    var p1 = new person("Navin Kishore", 18, b1);
+    p1.greeting();
+</script>

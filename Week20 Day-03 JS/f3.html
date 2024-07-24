@@ -1,0 +1,18 @@
+<script>
+    //callback function
+    //using normal function ana annonymous function
+    function add(marks, callback) {
+        var total = 0;
+        for (var i = 0; i < marks.length; i++) {
+            total += marks[i];
+        }
+        callback(total, marks.length);
+    }
+
+    var printAverage = function (total, noOfMarks) {
+        console.log("Avg : " + (total / noOfMarks));
+    }
+
+    add([90, 20, 5], printAverage);
+
+</script>

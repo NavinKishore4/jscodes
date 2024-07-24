@@ -1,0 +1,23 @@
+<script>
+    //declare a int array and push 5 element to it
+    var arr = [];
+    arr.push(10);
+    arr.push(20);
+    arr.push(30);
+    arr.push(40);
+    arr.push(50);
+    //add them all using any loop
+    var sum = 0;
+    for (var i = 0; i < arr.length; i++) {
+        sum = sum + arr[i];
+    }
+    //find the highest value in it 
+    console.log("sum = " + sum);
+    var max = 0;
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    console.log("max is " + max);
+</script>

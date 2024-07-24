@@ -1,0 +1,32 @@
+<script>
+    // 1. Initialize an array named fruits with the elements "apple", "orange" and "banana"
+    var fruits = ["apple", "orange", "banana", "pineapple"];
+    // 2. Access the second element of the fruits array.
+    console.log(fruits[1]);
+    // 3. Replace the third element of the fruits array with "grape."
+    fruits[2] = "grape";
+    // Array Operations
+    // 4. Determine the length of the fruits array.
+    console.log(fruits.length);
+    // 5. Add "pear" to the end of the fruits array using the push method.
+    fruits.push("pear");
+    // 6. Remove the last element from the fruits array using the pop method.
+    fruits.pop();
+    // 7. Create a new array named selectedFruits by slicing the fruits array from index 1 to 3.
+    selectedFruits = fruits.slice(1, 3);
+    console.log(selectedFruits);
+    // 8. Use the splice method to remove the second element and add "mango" and "kiwi" in its place in the fruits array.
+    fruits.splice(1, 1, "mango", "kiwi");
+    console.log(fruits);
+    // 9. Sort the selectedFruits array in alphabetical order.
+    console.log(selectedFruits.sort());
+    // 10. Reverse the order of elements in the selectedFruits array.
+    console.log(selectedFruits.reverse());
+    // 11. Find the index of "banana" in the fruits array.
+    console.log(fruits.indexOf("banana"));
+    // 12. Create a new array named allFruits by concatenating the fruits and selectedFruits arrays.
+    allFruits = fruits.concat(selectedFruits);
+    console.log(allFruits);
+
+
+</script>

@@ -1,0 +1,52 @@
+<script>
+    function myfuction() {
+        var tdate = new Date();
+        var postedDate = new Date("2024-05-01 20:00:00");
+        var millsisecondsDiff = tdate.getTime() - postedDate.getTime();
+        //difference into positive only
+        var millsiseconds = Math.abs(millsisecondsDiff);
+        var minutes = millsiseconds / 1000 / 60;
+        if (minutes < 60) {
+            if (millsisecondsDiff < 0) {
+                console.log("will be posted in" + Math.floor(minutes) + "mins");
+
+            }
+            else {
+                console.log("posted " + Math.floor(minutes) + "mins ago");
+            }
+        }
+        else {
+            var hours = minutes / 60;
+            if (hours < 24) {
+                if (millsisecondsDiff < 0) {
+                    console.log("will be posted in " + Math.floor(hours) + " hours ");
+                }
+                else {
+                    console.log(Math.floor(hours) + " hours ago");
+                }
+            }
+            else {
+                var days = hours / 24;
+                if (days > 30) {
+                    var month = days / 30;
+                    if (millsisecondsDiff < 0) {
+                        console.log("Will be posted in " + Math.floor(month) + " month");
+                    }
+                    else {
+                        console.log(Math.floor(month) + " month ago");
+                    }
+                }
+                else {
+                    if (millsisecondsDiff < 0) {
+                        console.log("Will be posted in " + Math.floor(days) + " days ")
+                    }
+                    else {
+                        console.log(Math.floor(days) + " days ago")
+                    }
+                }
+            }
+        }
+    }
+    myfuction();
+
+</script>

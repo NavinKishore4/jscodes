@@ -1,0 +1,46 @@
+<script>
+    // 3. Write a function that takes an array of strings and uses the forEach method to find the longest string. Return the longest string.
+    var animals = ["lion", "tiger", "elephant"];
+    findLargest(animals);
+
+    function findLargest(animals) {
+        var tempLarge = "";
+        animals.forEach(function (temp) {
+            if (temp.length > tempLarge.length) {
+                tempLarge = temp;
+            }
+        });
+        console.log("The largest String is " + tempLarge);
+    }
+
+    // 4. Implement a function that takes an array of numbers and uses the forEach method to create a new array containing only the odd numbers.
+
+    var numbers = [10, 20, 32, 11, 2, 223, 553];
+    var ansodd = createOdd(numbers);
+    console.log(ansodd);
+
+    function createOdd(numbers) {
+        var newArray = [];
+        numbers.forEach(function (temp) {
+            if (temp % 2 != 0) {
+                newArray.push(temp);
+            }
+        });
+        return newArray;
+    }
+
+    // 5. Create a function that takes an array of strings and uses the forEach method to count the total number of characters in all the strings. Return the count.
+
+    var stringarr = ["lion", "tiger", "elephant"];
+    totalChar(stringarr);
+
+    function totalChar(stringarr) {
+        var size = 0;
+        stringarr.forEach(function (temp) {
+            var tempsize = temp.length;
+            size += tempsize;
+        });
+        console.log(size);
+    }
+
+</script>

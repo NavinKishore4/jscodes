@@ -1,0 +1,24 @@
+// Implement a function that takes an array of strings and uses the filter method to create a new array containing only
+the palindromes (words that read the same backward as forward).
+
+<script>
+    var strarr = ["navin", "kishore", "kodee", "boopathi", "nimal", "noon"];
+    filterFunction(strarr);
+
+    function filterFunction(strarr) {
+        var newArr = strarr.filter(function (temp) {
+            var str = temp;
+            var len = str.length - 1;
+            for (var i = 0; i < str.length / 2; i++) {
+                if (str.charAt(i) == str.charAt(len)) {
+                    len--;
+                }
+                else {
+                    return false;
+                }
+            }
+            return true;
+        });
+        console.log(newArr);
+    }
+</script>

@@ -1,0 +1,30 @@
+// Given an array of objects with a numeric property, write a function that uses the filter method to create a new array
+containing only the objects where the numeric property is greater than a specified value.
+
+<script>
+    var number = [
+        {
+            "num": 11
+        },
+        {
+            "num": 12
+        },
+        {
+            "num": 1
+        }
+    ];
+    var specifiedValue = 10;
+    filterFunction(number, specifiedValue);
+
+    function filterFunction(number, sv) {
+        var newArray = number.filter(function (temp) {
+            if (temp.num > sv) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        });
+        console.log(newArray);
+    }
+</script>

@@ -1,0 +1,19 @@
+<script>
+    var age = [22, 34, 12, 44, 654, 1];
+
+    age.forEach(function (temp) {
+        console.log(temp);
+    });
+
+    console.log("********");
+
+    age.forEach(function (temp, index) {
+        console.log(temp + " -- " + index);
+    });
+
+    console.log("********");
+
+    age.forEach(function (temp, index, copy) {
+        console.log(copy[index]);
+    });
+</script>

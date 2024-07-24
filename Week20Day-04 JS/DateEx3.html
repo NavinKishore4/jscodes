@@ -1,0 +1,32 @@
+<script>
+
+    var myFunction = function (seconds) {
+
+        if (seconds < 60) {
+            console.log("Seconds are less than 60");
+            return;
+        }
+
+        //secs to min
+        var min = seconds / 60;
+        min = Math.trunc(min);
+        console.log(min);
+        var balanceMin = min % 60;
+        console.log("balanceMin : " + balanceMin);
+
+        //min to hour
+        var scrappedMin = min - balanceMin;
+        if (scrappedMin >= 60) {
+            console.log("scrappedMin : " + scrappedMin);
+            var hr = scrappedMin / 60;
+            var scrappedHr = hr;
+            if (hr > 24) {
+                scrappedHr = hr % 24;
+            }
+            console.log("scrappedHr : " + scrappedHr);
+        }
+    }
+
+    myFunction(6640);
+
+</script>

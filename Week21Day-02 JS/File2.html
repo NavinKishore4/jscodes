@@ -1,0 +1,35 @@
+<div id="p1" class="players">
+    <button type="button" onclick="deletePlayer('p1')">Delete</button> <span>Player1</span>
+</div>
+<div id="p2" class="players">
+    <button type="button" onclick="deletePlayer('p2')">Delete</button> <span>Player2</span>
+</div>
+<div id="p3" class="players">
+    <button type="button" onclick="deletePlayer('p3')">Delete</button> <span>Player3</span>
+</div>
+<div id="p4" class="players">
+    <button type="button" onclick="deletePlayer('p4')">Delete</button> <span>Player4</span>
+</div>
+<div id="p5" class="players">
+    <button type="button" onclick="deletePlayer('p5')">Delete</button> <span>Player5</span>
+</div>
+
+<br><br>
+<button type="button" onclick="deleteAll()">DeleteAll</button>
+
+
+<script>
+
+    function deletePlayer(elementId) {
+        var player = document.getElementById(elementId);
+        player.remove();
+    }
+
+    function deleteAll() {
+        var player = document.getElementsByClassName("players");
+        for (var i = 0; i < player.length;) {
+            player[i].remove();
+        }
+    }
+
+</script>

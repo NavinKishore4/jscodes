@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html with Js</title>
+</head>
+
+<body>
+
+    A : <input type="number" name="a" id="a">
+    <br>
+    B : <input type="number" name="b" id="b">
+    <br>
+    C : <input type="number" name="c" id="c">
+    <br>
+    <span id="answer"></span>
+    <br>
+    <button type="button" onclick="add()">Add</button>
+    <button type="button" onmouseover="sub()">Sub</button>
+
+</body>
+
+</html>
+
+<script>
+    function add() {
+        //JS Code
+        //reading the input from the html --> input elements
+        var aValue = document.getElementById("a").value;
+        alert(aValue);
+        var bValue = document.getElementById("b").value;
+        alert(bValue);
+        //concatenate - js always take data as string from html
+        //var answer=aValue + bValue;
+
+        var answer = parseInt(aValue) + parseInt(bValue);
+        //alert(answer);
+
+        //show in the input box
+        document.getElementById("c").value = answer;
+
+        //showign in a non-input box
+        document.getElementById("answer").innerHTML = answer;
+
+    }
+    function sub() {
+        //JS Code
+        //reading the input from the html --> input elements
+        var aValue = document.getElementById("a").value;
+        alert(aValue);
+        var bValue = document.getElementById("b").value;
+        alert(bValue);
+        //concatenate - js always take data as string from html
+        //var answer=aValue + bValue;
+
+        var answer = parseInt(aValue) - parseInt(bValue);
+        //alert(answer);
+
+        //show in the input box
+        document.getElementById("c").value = answer;
+
+        //showign in a non-input box
+        document.getElementById("answer").innerHTML = answer;
+
+    }
+</script>

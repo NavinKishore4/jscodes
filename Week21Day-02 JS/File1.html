@@ -1,0 +1,70 @@
+<div id="target">
+
+</div>
+
+<label>No.of batsman</label>
+<input type="number" id="count" />
+<button type="button" onclick="createTable()">Create ScoreCard</button>
+
+<br><br>
+<input type="number" id="totalrun">
+<input type="number" id="totalball">
+<button type="button" onclick="findTotal()"> Find Total </button>
+
+<script>
+    function createTable() {
+        //read the count
+        var count = document.getElementById("count").value;
+        //creat a table
+        var table = document.createElement("table");
+
+        //create row
+        for (var i = 1; i <= count; i++) {
+            var tr = document.createElement("tr");
+
+            //create td: name,runs,balls
+            var tdName = document.createElement("td");
+            tdName.innerHTML = "Batsman " + i;
+            var tdRuns = document.createElement("td");
+            var ipRuns = document.createElement("input");
+            ipRuns.type = "number";
+            ipRuns.classList.add("runs");
+            //  tdRuns.innerHTML = 10 * i;
+            tdRuns.appendChild(ipRuns);
+
+            var tdBalls = document.createElement("td");
+            var ipBalls = document.createElement("input");
+            ipBalls.type = "number";
+            ipBalls.classList.add("balls")
+            // tdBalls.innerHTML = 10 * i;
+            tdBalls.appendChild(ipBalls);
+
+
+            tr.appendChild(tdName);
+            tr.appendChild(tdRuns);
+            tr.appendChild(tdBalls);
+
+            table.appendChild(tr);
+        }
+
+        document.getElementById("target").appendChild(table);
+
+    }
+
+    function findTotal() {
+        var ipRuns = document.getElementsByClassName("runs");
+        var ipBalls = document.getElementsByClassName("balls");
+
+        var totalRun = 0;
+        var totalBall = 0;
+
+        for (var i = 0; i < ipRuns.length; i++) {
+            totalRun += parseInt(ipRuns[i].value);
+            totalBall += parseInt(ipBalls[i].value);
+        }
+
+        document.getElementById("totalrun").value = totalRun;
+        document.getElementById("totalball").value = totalBall;
+
+    }
+</script>

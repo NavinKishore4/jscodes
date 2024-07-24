@@ -1,0 +1,17 @@
+<script>
+    function calculateAreas(rectangles) {
+        return rectangles.map(function (rectangle) {
+            return rectangle.width * rectangle.height;
+        });
+    }
+
+    // Example usage:
+    var rectangles = [
+        { width: 4, height: 5 },
+        { width: 3, height: 6 },
+        { width: 7, height: 2 }
+    ];
+
+    var areas = calculateAreas(rectangles);
+    console.log(areas); // Output: [20, 18, 14]
+</script>

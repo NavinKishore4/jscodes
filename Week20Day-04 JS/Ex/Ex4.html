@@ -1,0 +1,18 @@
+<script>
+    var num = "noon";
+    var targetStr = num.toString();
+    var right = targetStr.length - 1;
+    var palindrome = true;
+    for (var left = 0; left < right / 2; left++) {
+        if (targetStr[left].toLowerCase().localeCompare(targetStr[right - left]).toLowerCase() != 0) {
+            palindrome = false;
+            break;
+        }
+    }
+    if (palindrome) {
+        console.log("Palindrome")
+    }
+    else {
+        console.log("Not a Palindrome");
+    }
+</script>

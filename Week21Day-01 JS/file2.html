@@ -1,0 +1,25 @@
+<script>
+
+    //callback function using traditional
+    function add(a, b, callback) {
+        callback(a + b);
+    }
+    function statement(str) {
+        console.log("The addition of this is : " + str);
+    }
+    add(10, 4, statement);
+
+    //first-class-citizens
+    function mul(a, b) {
+        return function () {
+            console.log("Hello");
+            console.log(a * b);
+            console.log("Hii");
+        }
+    }
+    //method 1 for calling ,it is stored and we can called when ever we want
+    var c = mul(5, 4);
+    c();
+    //method 2 for calling , it is instantly called 
+    mul(6, 9)();
+</script>

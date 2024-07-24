@@ -1,0 +1,32 @@
+<script>
+    // 1. Create an object named person with properties name (string), age (number), and city (string).
+    var person = {
+        name: "John",
+        age: 30,
+        city: "Los Angeles"
+    };
+
+    var p1 = Object.create(person);
+
+    // 2. Access the age property of the person object.
+    console.log(p1.age); // Output: 30
+
+    // 3. Change the value of the city property in the person object to "New York."
+    p1.city = "New York";
+
+    // 4. Create a nested object named car with properties model (string) and engine (an object with properties type and horsepower).
+    var car = {
+        model: "Honda",
+        engine: {
+            type: "V6",
+            horsepower: 300
+        }
+    };
+    var c1 = Object.create(car);
+    // 5. Access the horsepower property of the engine property in the car object.
+    console.log(c1.engine.horsepower); // Output: 300
+
+    // 6. Change the model property of the car object to "Toyota."
+    c1.model = "Toyota";
+
+</script>

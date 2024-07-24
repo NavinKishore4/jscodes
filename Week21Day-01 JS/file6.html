@@ -1,0 +1,28 @@
+<div id="elements"></div>
+<button type="button" onclick="newElement()">Create Element</button>
+<script>
+    function newElement() {
+        var myElement = document.createElement("input");
+        myElement.type = "date";
+        myElement.id = "dob";
+        myElement.name = "dateofbirth";
+        myElement.classList.add("my-date");
+        myElement.style.backgroundColor = "red";
+        console.log(myElement);
+
+        var myPara = document.createElement("p");
+        myPara.innerHTML = "good morning";
+        myPara.type = "date";
+        myPara.id = "dob";
+        myPara.name = "dateofbirth";
+        myPara.classList.add("my-date");
+        myPara.style.backgroundColor = "red";
+        console.log(myPara);
+
+        var div = document.getElementById("elements");
+        div.appendChild(myElement);
+        div.appendChild(myPara);
+
+    }
+
+</script>

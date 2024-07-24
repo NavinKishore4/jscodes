@@ -1,0 +1,14 @@
+// Write a function that takes an array of numbers and uses the filter method to create a new array containing only the
+positive numbers.
+
+<script>
+    var nums = [1, -1, -1, 2, 3, 5, 4, -1, -65];
+    postive(nums);
+
+    function postive(nums) {
+        var posnums = nums.filter(function (temp) {
+            return temp >= 0;
+        });
+        console.log(posnums);
+    }
+</script>
